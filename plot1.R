@@ -9,7 +9,7 @@ data     <- na.omit(data)
 data$Date<- as.Date(data$Date,"%d/%m/%Y")
 data$Time<- strptime(data$Time, "%H:%M:%S")
 
-hist(data$Global_active_power, col="red", 
+hist(data$Global_active_power, col="red", cex.axis = 0.7,
     main="Global Active Power", cex.main= 0.9, 
     xlab="Global Active Power (kilowatts)", cex.lab = 0.8)
 dev.copy(png, file = "plot1.png", width=480, height=480)
